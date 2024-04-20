@@ -9,7 +9,7 @@ builder.Services.AddControllersWithViews();
 var app = builder.Build();
 
 builder.Services.AddDbContext<LibreriaDbContext>(options => options.UseSqlServer
-(builder.Configuration.GetConnectionString("equiposDbConnection"))
+(builder.Configuration.GetConnectionString("LibreriaDbConnection"))
 );
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
