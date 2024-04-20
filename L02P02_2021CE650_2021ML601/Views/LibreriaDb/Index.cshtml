@@ -51,8 +51,9 @@
             <div class="col-sm-2">
                 <label for="fileInput">Seleccionar Archivo</label>
             </div>
-            <div class="col-sm-10">
-                <input type="file" id="fileInput" name="file">
+            <div class="col-sm-4">
+                @Html.DropDownList("categoria", new SelectList(strList2,
+                     strList2.FirstOrDefault()), "--Selecciona un autorasasas ----")
             </div>
         </div>
 
