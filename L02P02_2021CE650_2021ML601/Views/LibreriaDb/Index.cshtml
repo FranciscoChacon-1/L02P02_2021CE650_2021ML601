@@ -36,7 +36,7 @@
                 <label>Autor</label>
             </div>
             <div class="col-sm-4">
-                @Html.DropDownList("autor", new SelectList(Model.Autores, "Id", "Nombre"), "Seleccione un autor", new { @class = "form-control" })
+                @Html.DropDownList("autor", new SelectList(Model.autores, "id", "autor"), "Seleccione un autor", new { @class = "form-control" })
             </div>
         </div>
 
@@ -45,7 +45,7 @@
                 <label>Categoría</label>
             </div>
             <div class="col-sm-4">
-                @Html.DropDownList("categoria", new SelectList(Model.Categorias, "Id", "Nombre"), "Seleccione una categoría", new { @class = "form-control" })
+                @Html.DropDownList("categoria", new SelectList(Model.categorias, "id", "categoria"), "Seleccione una categoría", new { @class = "form-control" })
             </div>
         </div>
 
