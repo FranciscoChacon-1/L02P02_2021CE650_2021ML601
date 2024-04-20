@@ -6,7 +6,8 @@
     <br />
     <form>
         @*Inicio del Formulario*@
-
+        <div class="container">
+        
         <div class="form-group row mb-4">
             <div class="col-sm-2">
                 <label>Nombre del libro</label>
@@ -52,13 +53,11 @@
                 <label for="fileInput">Seleccionar Archivo</label>
             </div>
             <div class="col-sm-4">
-                @Html.DropDownList("categoria", new SelectList(strList2,
+                @Html.DropDownList("categoria o Genero", new SelectList(strList2,
                      strList2.FirstOrDefault()), "--Selecciona un autorasasas ----")
             </div>
         </div>
-
-
-
+       </div>
         @*Fin del Formulario*@
     </form>
 }
