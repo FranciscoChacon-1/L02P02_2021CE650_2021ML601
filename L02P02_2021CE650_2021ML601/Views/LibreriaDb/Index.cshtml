@@ -165,28 +165,28 @@
             </div>
         </div>
 
-        <div class="form-group row mb-4">
-            <div class="col-sm-2">
-                <label>Precio</label>
-            </div>
-            <div class="col-sm-2">
-                @Html.TextBox("precio", "", new { @class = "form-control" })
-            </div>
+            <div class="form-group row mb-4">
+                <div class="col-sm-2">
+                    <label>Precio</label>
+                </div>
+                <div class="col-sm-2">
+                    @Html.TextBox("precio", "", new { @class = "form-control" })
+                </div>
 
-            <div class="col-sm-1">
-                <label>Autor</label>
-            </div>
-            <div class="col-sm-1">
-                @Html.DropDownList("id_autor", new SelectList(strList, strList.FirstOrDefault()), "--Selecciona un autor ----", new { @class = "form-control" })
-            </div>
+                <div class="col-sm-1">
+                    <label>Autor</label>
+                </div>
+                <div class="col-sm-2">
+                    @Html.DropDownList("id_autor", new SelectList(strList, strList.FirstOrDefault()), "--Selecciona un autor ----", new { @class = "form-control" })
+                </div>
 
-            <div class="col-sm-1">
-                <label>Categoría</label>
+                <div class="col-sm-1">
+                    <label>Categoría</label>
+                </div>
+                <div class="col-sm-2">
+                    @Html.DropDownList("id_categoria", new SelectList(strList2, strList2.FirstOrDefault()), "--Selecciona una categoría ----", new { @class = "form-control" })
+                </div>
             </div>
-            <div class="col-sm-2">
-                @Html.DropDownList("id_categoria", new SelectList(strList2, strList2.FirstOrDefault()), "--Selecciona una categoría ----", new { @class = "form-control" })
-            </div>
-        </div>
 
         <div class="form-group row mb-4">
             <div class="col-sm-2">
