@@ -1,4 +1,7 @@
 ﻿@{
+    IEnumerable<string> strList = new List<string> { "p", "j", "d", "ñ" };
+    IEnumerable<string> strList2 = new List<string> { "hola", "j", "d", "ñ" };
+
     <h1>Creación de Libros</h1>
     <br />
     <form>
@@ -36,7 +39,8 @@
                 <label>Autor</label>
             </div>
             <div class="col-sm-4">
-                @Html.DropDownList("autor", new SelectList(Model.autores, "id", "autor"), "Seleccione un autor", new { @class = "form-control" })
+                @Html.DropDownList("autor", new SelectList(strList,
+                     strList.FirstOrDefault()), "--Selecciona un autor ----")
             </div>
         </div>
 
@@ -45,7 +49,8 @@
                 <label>Categoría</label>
             </div>
             <div class="col-sm-4">
-                @Html.DropDownList("categoria", new SelectList(Model.categorias, "id", "categoria"), "Seleccione una categoría", new { @class = "form-control" })
+                @Html.DropDownList("categoria", new SelectList(strList2,
+                     strList2.FirstOrDefault()), "--Selecciona un autor ----")
             </div>
         </div>
 
