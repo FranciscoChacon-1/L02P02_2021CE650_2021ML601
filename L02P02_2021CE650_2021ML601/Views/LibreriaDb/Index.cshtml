@@ -5,66 +5,74 @@
     IEnumerable<string> strList2 = new List<string> { "hola", "j", "d", "ñ" };
 }
 
-<h1>Creación de Libros</h1>
-<br />
-<form>
-    @*Inicio del Formulario*@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="~/css/style.css"> <!-- Enlace al archivo CSS -->
+</head>
+<body>
 
-    <div class="form-group row mb-4">
-        <div class="col-sm-2">
-            <label>Nombre del libro</label>
-        </div>
-        <div class="col-sm-4">
-            @Html.TextBox("nombre", "", new { @class = "form-control" })
-        </div>
-    </div>
+    <h1>Creación de Libros</h1>
+    <br />
+    <form>
+        <!-- Inicio del Formulario -->
 
-    <div class="form-group row mb-4">
-        <div class="col-sm-2">
-            <label>Descripción</label>
-        </div>
-        <div class="col-sm-4">
-            @Html.TextArea("descripcion", "", new { @class = "form-control" })
-        </div>
-    </div>
-
-    <div class="form-group row mb-4">
-        <div class="col-sm-2">
-            <label>Precio</label>
-        </div>
-        <div class="col-sm-2">
-            @Html.TextBox("precio", "", new { @class = "form-control" })
+        <div class="form-group row mb-4">
+            <div class="col-sm-2">
+                <label>Nombre del libro</label>
+            </div>
+            <div class="col-sm-4">
+                @Html.TextBox("nombre", "", new { @class = "form-control" })
+            </div>
         </div>
 
-        <div class="col-sm-2">
-            <label>Autor</label>
+        <div class="form-group row mb-4">
+            <div class="col-sm-2">
+                <label>Descripción</label>
+            </div>
+            <div class="col-sm-4">
+                @Html.TextArea("descripcion", "", new { @class = "form-control" })
+            </div>
         </div>
-        <div class="col-sm-2">
-            @Html.DropDownList("id_autor", new SelectList(strList, strList.FirstOrDefault()), "--Selecciona un autor ----", new { @class = "form-control" })
+
+        <div class="form-group row mb-4">
+            <div class="col-sm-2">
+                <label>Precio</label>
+            </div>
+            <div class="col-sm-2">
+                @Html.TextBox("precio", "", new { @class = "form-control" })
+            </div>
+
+            <div class="col-sm-2">
+                <label>Autor</label>
+            </div>
+            <div class="col-sm-2">
+                @Html.DropDownList("id_autor", new SelectList(strList, strList.FirstOrDefault()), "--Selecciona un autor ----", new { @class = "form-control" })
+            </div>
+
+            <div class="col-sm-2">
+                <label>Categoría</label>
+            </div>
+            <div class="col-sm-2">
+                @Html.DropDownList("id_categoria", new SelectList(strList2, strList2.FirstOrDefault()), "--Selecciona una categoría ----", new { @class = "form-control" })
+            </div>
         </div>
 
-        <div class="col-sm-2">
-            <label>Categoría</label>
+        <div class="form-group row mb-4">
+            <div class="col-sm-2">
+                <label for="fileInput">Seleccionar Archivo</label>
+            </div>
+            <div class="col-sm-10">
+                <input type="file" id="fileInput" name="file">
+            </div>
         </div>
-        <div class="col-sm-2">
-            @Html.DropDownList("id_categoria", new SelectList(strList2, strList2.FirstOrDefault()), "--Selecciona una categoría ----", new { @class = "form-control" })
-        </div>
-    </div>
 
-    <div class="form-group row mb-4">
-        <div class="col-sm-2">
-            <label for="fileInput">Seleccionar Archivo</label>
-        </div>
-        <div class="col-sm-10">
-            <input type="file" id="fileInput" name="file">
-        </div>
-    </div>
+        <button type="submit" class="btn btn-primary">Guardar</button>
 
-    <button type="submit" class="btn btn-primary">Guardar</button>
+        <h2>Lista de Libros</h2>
 
-    <h2>Lista de Libros</h2>
+        <!-- Fin del Formulario -->
+    </form>
 
-
-
-    @*Fin del Formulario*@
-</form>
+</body>
+</html>
