@@ -1,5 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
+﻿using L02P02_2021CE650_2021ML601.Controllers;
+using Microsoft.EntityFrameworkCore;
 
 namespace L02P02_2021CE650_2021ML601.Models
 {
@@ -9,6 +9,6 @@ namespace L02P02_2021CE650_2021ML601.Models
         {
         }
 
-        public DbSet<equipos> equipos { get; set; }
+        public DbSet<LibreriaDb> libros { get; set; }
     }
 }
