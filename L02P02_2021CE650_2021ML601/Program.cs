@@ -6,11 +6,13 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-var app = builder.Build();
+
 
 builder.Services.AddDbContext<LibreriaDbContext>(options => options.UseSqlServer
-(builder.Configuration.GetConnectionString("LibreriaDbConnection"))
+(builder.Configuration.GetConnectionString("LibreriaDbconnection"))
 );
+
+var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {

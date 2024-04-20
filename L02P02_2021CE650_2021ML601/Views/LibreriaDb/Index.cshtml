@@ -1,25 +1,27 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
     <h1>Creación de Libros</h1>
     <br />
     <form>
-        @*Incio del Formulario*@
+        @*Inicio del Formulario*@
 
         <div class="form-group row mb-4">
             <div class="col-sm-2">
                 <label>Nombre del libro</label>
             </div>
             <div class="col-sm-4">
-                @Html.TextBox("nombre","",new {@class="form-control"})
+                @Html.TextBox("nombre", "", new { @class = "form-control" })
             </div>
+        </div>
+
+        <div class="form-group row mb-4">
             <div class="col-sm-2">
-                @Html.Label("lblDescripción","Descripción")
+                @Html.Label("lblDescripcion", "Descripción")
             </div>
             <div class="col-sm-4">
-                @Html.TextArea("descricpión","",new {@class="form-control"})
+                @Html.TextArea("descripcion", "", new { @class = "form-control" })
             </div>
+        </div>
+
         @*Fin del Formulario*@
     </form>
 }
