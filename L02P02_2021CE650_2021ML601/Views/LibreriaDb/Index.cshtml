@@ -1,6 +1,7 @@
 ﻿@{
     IEnumerable<string> strList = new List<string> { "p", "j", "d", "ñ" };
     IEnumerable<string> strList2 = new List<string> { "hola", "j", "d", "ñ" };
+    @model IEnumerable<L02P02_2021CE650_2021ML601.Models.libros>
 
     <h1>Creación de Libros</h1>
     <br />
@@ -55,6 +56,32 @@
                 <input type="file" id="fileInput" name="file">
             </div>
         </div>
+
+        <h2>Lista de Libros</h2>
+
+        <table class="table">
+            <tr>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Imagen</th>
+                <th>Autor</th>
+                <th>Categoría</th>
+                <th>Precio</th>
+                <th>Estado</th>
+            </tr>
+            @foreach (var libro in Model)
+            {
+                <tr>
+                    <td>@libro.nombre</td>
+                    <td>@libro.descripcion</td>
+                    <td><img src="@libro.url_imagen" alt="Imagen de libro" width="100" height="150" /></td>
+                    <td>@libro.id_autor</td>
+                    <td>@libro.id_categoria</td>
+                    <td>@libro.precio</td>
+                    <td>@libro.estado</td>
+                </tr>
+            }
+        </table>
 
 
 
