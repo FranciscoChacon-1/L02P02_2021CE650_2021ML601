@@ -11,5 +11,6 @@ namespace L02P02_2021CE650_2021ML601.Models
 
         public DbSet<LibreriaDb> libros { get; set; } 
         public DbSet<LibreriaDb> categorias { get; set; }
+        public DbSet<LibreriaDb> autores { get; set; }
     }
 }
