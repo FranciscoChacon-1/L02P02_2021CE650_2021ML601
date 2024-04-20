@@ -1,28 +1,26 @@
 ﻿@{
-    IEnumerable<string> strList = new List<string> { "jose","hola" };
-}
-<h1>Creación de Libros</h1>
-<br />
-<form>
-    @*Inicio del Formulario*@
+    <h1>Creación de Libros</h1>
+    <br />
+    <form>
+        @*Inicio del Formulario*@
 
-    <div class="form-group row mb-4">
-        <div class="col-sm-2">
-            <label>Nombre del libro</label>
+        <div class="form-group row mb-4">
+            <div class="col-sm-2">
+                <label>Nombre del libro</label>
+            </div>
+            <div class="col-sm-4">
+                @Html.TextBox("nombre", "", new { @class = "form-control" })
+            </div>
         </div>
-        <div class="col-sm-4">
-            @Html.TextBox("nombre", "", new { @class = "form-control" })
-        </div>
-    </div>
 
-    <div class="form-group row mb-4">
-        <div class="col-sm-2">
-            @Html.Label("lblDescripcion", "Descripción")
+        <div class="form-group row mb-4">
+            <div class="col-sm-2">
+                @Html.Label("lblDescripcion", "Descripción")
+            </div>
+            <div class="col-sm-4">
+                @Html.TextArea("descripcion", "", new { @class = "form-control" })
+            </div>
         </div>
-        <div class="col-sm-4">
-            @Html.TextArea("descripcion", "", new { @class = "form-control" })
-        </div>
-    </div>
 
     <div class="form-group row mb-4">
         <div class="col-sm-2">
@@ -33,21 +31,23 @@
         </div>
     </div>
 
-    <div class="form-group row mb-4">
-        <div class="col-sm-2">
-            <label>Autor</label>
+        <div class="form-group row mb-4">
+            <div class="col-sm-2">
+                <label>Autor</label>
+            </div>
+            <div class="col-sm-4">
+                @Html.DropDownList("autor", new SelectList(Model.autores, "id", "autor"), "Seleccione un autor", new { @class = "form-control" })
+            </div>
         </div>
 
-    </div>
-
-    <div class="form-group row mb-4">
-        <div class="col-sm-2">
-            <label>Categoría</label>
+        <div class="form-group row mb-4">
+            <div class="col-sm-2">
+                <label>Categoría</label>
+            </div>
+            <div class="col-sm-4">
+                @Html.DropDownList("categoria", new SelectList(Model.categorias, "id", "categoria"), "Seleccione una categoría", new { @class = "form-control" })
+            </div>
         </div>
-        <div class="col-sm-4">
-            @Html.DropDownList("categoria", new SelectList(Model.categorias, "id", "categoria"), "Seleccione una categoría", new { @class = "form-control" })
-        </div>
-    </div>
 
     @*Fin del Formulario*@
 </form>
