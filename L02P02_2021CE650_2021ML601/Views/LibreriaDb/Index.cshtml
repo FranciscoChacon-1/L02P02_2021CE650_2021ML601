@@ -12,7 +12,6 @@
                 @Html.TextBox("nombre", "", new { @class = "form-control" })
             </div>
         </div>
-
         <div class="form-group row mb-4">
             <div class="col-sm-2">
                 @Html.Label("lblDescripcion", "Descripción")
@@ -21,7 +20,17 @@
                 @Html.TextArea("descripcion", "", new { @class = "form-control" })
             </div>
         </div>
-
+        <div class="form-group row mb-4">
+            <div class="col-sm-2">
+                <label>Precio</label>
+            </div>
+            <div class="col-sm-4">
+                @Html.TextBox("precio", "", new { @class = "form-control" })
+            </div>
+            <div class="">
+                @Html.Label()
+            </div>
+        </div>
         @*Fin del Formulario*@
     </form>
 }
