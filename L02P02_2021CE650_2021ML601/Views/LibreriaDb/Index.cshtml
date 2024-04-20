@@ -5,6 +5,7 @@
     IEnumerable<string> strList2 = new List<string> { "hola", "j", "d", "ñ" };
 }
 
+<<<<<<< HEAD
 <h1>Creación de Libros</h1>
 <br />
 <form>
@@ -13,6 +14,21 @@
     <div class="form-group row mb-4">
         <div class="col-sm-2">
             <label>Nombre del libro</label>
+=======
+    <h1>Creación de Libros</h1>
+    <br />
+    <form>
+        @*Inicio del Formulario*@
+        <div class="container">
+        
+        <div class="form-group row mb-4">
+            <div class="col-sm-2">
+                <label>Nombre del libro</label>
+            </div>
+            <div class="col-sm-4">
+                @Html.TextBox("nombre", "", new { @class = "form-control" })
+            </div>
+>>>>>>> ad7a1cf0c294ce50e7607a1cf42eb7c7407fab97
         </div>
         <div class="col-sm-4">
             @Html.TextBox("nombre", "", new { @class = "form-control" })
@@ -39,6 +55,7 @@
         <div class="col-sm-2">
             <label>Autor</label>
         </div>
+<<<<<<< HEAD
         <div class="col-sm-2">
             @Html.DropDownList("id_autor", new SelectList(strList, strList.FirstOrDefault()), "--Selecciona un autor ----", new { @class = "form-control" })
         </div>
@@ -67,3 +84,18 @@
 
     @*Fin del Formulario*@
 </form>
+=======
+        <div class="form-group row mb-4">
+            <div class="col-sm-2">
+                <label for="fileInput">Seleccionar Archivo</label>
+            </div>
+            <div class="col-sm-4">
+                @Html.DropDownList("categoria o Genero", new SelectList(strList2,
+                     strList2.FirstOrDefault()), "--Selecciona un autorasasas ----")
+            </div>
+        </div>
+       </div>
+        @*Fin del Formulario*@
+    </form>
+}
+>>>>>>> ad7a1cf0c294ce50e7607a1cf42eb7c7407fab97
